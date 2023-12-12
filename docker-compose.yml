@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  sencer_nerede:
+    build: .
+    ports:
+      - "8081:8081"
+      - "7001:7001"
+    env_file:
+      - .env
+    volumes:
+      - /var/www/html:/var/www/html
+      - ./logs:/app/logs
+      - ./config.json:/app/config.json
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - mynetwork
+
+  redis:
+    image: redis:latest
+    restart: unless-stopped
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
