@@ -20,6 +20,7 @@ import (
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 	redis "github.com/go-redis/redis/v8"
 	"github.com/gorilla/websocket"
+	"golang.org/x/crypto/bcrypt"
 )
 
 var signKey = []byte(os.Getenv("JWT_SECRET"))
@@ -336,11 +337,13 @@ func main() {
 			return
 		}
 
-		// TODO
-		adminUsername := os.Getenv("ADMIN_USERNAME")
-		adminPassword := os.Getenv("ADMIN_PASSWORD")
+		ADMIN_USERNAME := os.Getenv("HASHED_ADMIN_USERNAME")
+		ADMIN_PASSWORD := os.Getenv("HASHED_ADMIN_PASSWORD")
 
-		if creds.Username == adminUsername && creds.Password == adminPassword {
+		errUsername := bcrypt.CompareHashAndPassword([]byte(ADMIN_USERNAME), []byte(creds.Username))
+		errPassword := bcrypt.CompareHashAndPassword([]byte(ADMIN_PASSWORD), []byte(creds.Password))
+
+		if errUsername == nil && errPassword == nil {
 			fmt.Println("Valid credentials")
 			tokenString, err := generateJWT()
 			if err != nil {
