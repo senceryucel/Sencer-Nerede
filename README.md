@@ -1,4 +1,4 @@
-# Sencer-Nerede
+# Sencer Nerede
 
 
 - [Türkçe](#Türkçe)
