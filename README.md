@@ -1,4 +1,6 @@
-# Sencer Nerede
+<div align="center">
+
+# Sencer Nerede</div>
 
 
 - [Türkçe](#Türkçe)
