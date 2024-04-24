@@ -7,7 +7,7 @@
 This mini project was my playground for getting my hands warmed up with Golang.
 
 ### Başlamadan
-Bu mini proje, Golang'e alışmak için aklıma gelen bir fikrin uygulanışıydo.
+Bu mini proje, Golang'e alışmak için aklıma gelen bir fikrin uygulanışıydı.
 
 
 
