@@ -4,10 +4,10 @@
 
 
 ### Read First
-This mini project was my playground for getting my hands warmed up with Golang. So, it does not aim to change the world or something.
+This mini project was my playground for getting my hands warmed up with Golang.
 
 ### Başlamadan
-Bu mini proje, Golang pratiği yapmak için aklıma gelen bir fikrin uygulanışıydı. Dolayısıyla, dünyayı değiştirme gayesi gütmemekte.
+Bu mini proje, Golang'e alışmak için aklıma gelen bir fikrin uygulanışıydo.
 
 
 
